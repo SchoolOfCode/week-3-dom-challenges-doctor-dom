@@ -13,3 +13,23 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// ★
+
+// create const for div containg the stars
+// create const for slider
+// create function to update div conating stars
+// create loop for number of stars
+// add eventlistener to listen to slider
+
+const starSpan = document.querySelector(".star-icon");
+const slider   = document.querySelector("#starSlider");
+
+function changeStars() {
+  starSpan.textContent = null;
+  for (let i = 0; i < slider.value; i++) {
+    starSpan.textContent += "★";
+  }
+}
+
+slider.addEventListener("change", changeStars);
