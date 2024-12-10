@@ -26,8 +26,8 @@ const doors = document.querySelectorAll(".door");
 
 const randomDoor = Math.floor(Math.random() * doors.length);
 
-// [i, door] destructuring assingment extracts the values from an the NodeList returned by the querySelectorAll (not exactly an array but array like as it behaves like an array, cant use .map() etc but can use .entries() and .forEach() which can be used to iterate through)
-// .entries aquires both index and door element, index (or key) of the NodeList and gernerated an iterator that returns pairs of values containing the index (position) of the element in the NodeList, and the actual DOM element (in this case the door <img>)
+// [i, door] destructuring assignment extracts the values from the NodeList returned by the querySelectorAll (not exactly an array but array like as it behaves like an array, cant use .map() etc but can use .entries() and .forEach() which can be used to iterate through)
+// .entries aquires both index and door element, index (or key) of the NodeList and generates an iterator that returns pairs of values containing the index (position) of the element in the NodeList, and the actual DOM element (in this case the door <img>)
 function revealDoor () {
   for (const [i, door] of doors.entries()) { 
     if (i === randomDoor) {
