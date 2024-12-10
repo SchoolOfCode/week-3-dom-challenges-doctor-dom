@@ -13,3 +13,16 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// create two variables for canvas and colour picker
+// add event listener for colour selection
+// find selective colour
+// set canvas colour to match selection
+
+const canvas = document.getElementById("canvas");
+const colorPicker = document.getElementById("colorPicker");
+
+function chameleon() {
+  canvas.style.backgroundColor = colorPicker.value;
+}
+colorPicker.addEventListener("change", chameleon);
