@@ -32,4 +32,4 @@ function changeStars() {
   }
 }
 
-slider.addEventListener("change", changeStars);
+slider.addEventListener("input", changeStars);
