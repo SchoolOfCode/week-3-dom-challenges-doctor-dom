@@ -13,3 +13,33 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// plan 
+// create door variable
+// randomise assigning loz to a door using math.random
+// add click event listeners to each door
+// if else loop revealing outcomes 
+// show randomised door with src
+// 
+
+const doors = document.querySelectorAll(".doors");
+
+const randomDoor = Math.floor(Math.random() * doors.length);
+
+/* function revealDoor () {
+  for (const [i, doors] of doors) {
+    if (i === randomDoor) {
+      doors.src = "door-open-loz.png";
+    } else {
+      doors.src = "door-open-empty.png";
+    }
+  }
+}
+
+function doorEventListeners() {
+  for (const door of doors) {
+  door.addEventListener("click", revealDoor);
+}
+}
+
+doorEventListeners(); */ 
