@@ -15,3 +15,21 @@ Hint: You can achieve this in multiple ways e.g. via the opacity or style proper
 */
 
 // Place your plan and solution below!
+
+// creating a variable, id = chris image
+// function to implement disappearing act
+// make opacity to 0
+// event listener mouse enter
+// additional function making chris reappear, set opacity to 1
+//event listener mouse leave
+
+const chrisImage = document.getElementById ("chrisImage");
+function disappear(){
+  chrisImage.style.opacity = 0
+}
+chrisImage.addEventListener("mouseenter", disappear);
+function appear() {
+  chrisImage.style.opacity = 1
+}
+chrisImage.addEventListener("mouseleave", appear);
+
