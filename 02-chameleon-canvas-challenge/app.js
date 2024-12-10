@@ -25,4 +25,4 @@ const colorPicker = document.getElementById("colorPicker");
 function chameleon() {
   canvas.style.backgroundColor = colorPicker.value;
 }
-colorPicker.addEventListener("change", chameleon);
+colorPicker.addEventListener("input", chameleon);
