@@ -22,16 +22,19 @@ Expected Outcomes:
 // show randomised door with src
 // 
 
-const doors = document.querySelectorAll(".doors");
+const doors = document.querySelectorAll(".door");
 
 const randomDoor = Math.floor(Math.random() * doors.length);
 
-/* function revealDoor () {
-  for (const [i, doors] of doors) {
+// [i, door] destructuring assingment extracts the values from an the NodeList returned by the querySelectorAll (not exactly an array but array like as it behaves like an array, cant use .map() etc but can use .entries() and .forEach() which can be used to iterate through)
+// .entries aquires both index and door element, index (or key) of the NodeList and gernerated an iterator that returns pairs of values containing the index (position) of the element in the NodeList, and the actual DOM element (in this case the door <img>)
+function revealDoor () {
+  for (const [i, door] of doors.entries()) { 
     if (i === randomDoor) {
-      doors.src = "door-open-loz.png";
+      door.src = "door-open-loz.png";
+      // include alerts
     } else {
-      doors.src = "door-open-empty.png";
+      door.src = "door-open-empty.png";
     }
   }
 }
@@ -42,4 +45,7 @@ function doorEventListeners() {
 }
 }
 
-doorEventListeners(); */ 
+doorEventListeners();
+
+
+// used a destructuring assignment [i, door] to extract the returned nodelist from querySelectorAll then .entries to return an iterator of the index and element door 
